@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegEnum", "RegEnum\RegEnum.csproj", "{9103DA03-A48F-4427-828A-46A42C520E13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateAnswerSheet", "CreateAnswerSheet\CreateAnswerSheet.csproj", "{0C4944C5-1270-4B62-88C2-C699BC836EF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fakepack", "fakepack\fakepack.csproj", "{5A5492A5-5A81-47D6-B57B-17BA7BDA0ACD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9103DA03-A48F-4427-828A-46A42C520E13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9103DA03-A48F-4427-828A-46A42C520E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9103DA03-A48F-4427-828A-46A42C520E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9103DA03-A48F-4427-828A-46A42C520E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4944C5-1270-4B62-88C2-C699BC836EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4944C5-1270-4B62-88C2-C699BC836EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4944C5-1270-4B62-88C2-C699BC836EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4944C5-1270-4B62-88C2-C699BC836EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A5492A5-5A81-47D6-B57B-17BA7BDA0ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A5492A5-5A81-47D6-B57B-17BA7BDA0ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A5492A5-5A81-47D6-B57B-17BA7BDA0ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A5492A5-5A81-47D6-B57B-17BA7BDA0ACD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
