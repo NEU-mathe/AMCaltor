@@ -6,6 +6,10 @@ This program is part of the tool kit NEU Mathe.
 
 The project is powered by C# and E language. Files with a suffix .e are written with E language, which is a commercial software.
 
+**Warning: Since the update on Dec 23, 2016, the question resources are stored under encryption. The program doesn't work entirely well any more. **  
+Further maintenance is needed, however, not planned.  
+You can change the download source to an address holding previous resources, or contribute a decrypt module.
+
 ## Usage
 
 Download binary executive file from the [Release Page](https://github.com/NEU-mathe/AMCaltor/releases).
