@@ -13,13 +13,13 @@ namespace RegEnum
         static void Main(string[] args)
         {
             string appdata = Environment.GetEnvironmentVariable("AppData");
-            if(Directory.Exists(appdata + "\\AMFairy") == false)
+            if(Directory.Exists(appdata + "\\2645") == false)
             {
-                Directory.CreateDirectory(appdata + "\\AMFairy");
+                Directory.CreateDirectory(appdata + "\\2645");
             }
-            if(Directory.Exists(appdata + "\\AMFairy\\AMCalTor") == false)
+            if(Directory.Exists(appdata + "\\2645\\AMCalTor") == false)
             {
-                Directory.CreateDirectory(appdata + "\\AMFairy\\AMCalTor");
+                Directory.CreateDirectory(appdata + "\\2645\\AMCalTor");
             }
             try
             {
@@ -40,7 +40,7 @@ namespace RegEnum
                     Console.WriteLine(s);
                     if (s.Contains("大学数学过程学习系统") && (!s.Contains("skin")) && (!s.Contains("Start Menu")))
                     {
-                        FileStream aFile = new FileStream(appdata + "\\AMFairy\\AMCalTor\\WorkingDir.ini", FileMode.Create);
+                        FileStream aFile = new FileStream(appdata + "\\2645\\AMCalTor\\WorkingDir.ini", FileMode.Create);
                         StreamWriter sw = new StreamWriter(aFile, Encoding.GetEncoding("GB18030"));
                         sw.Write(s);
                         sw.Close();

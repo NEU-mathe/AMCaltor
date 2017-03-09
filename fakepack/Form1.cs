@@ -31,10 +31,8 @@ namespace fakepack
             Function.Login(textBox2.Text, textBox4.Text);
             string[] str = new String[100];
             str = Function.ExamTemplate(comboBox1.Text,textBox2.Text,int.Parse(textBox3.Text));
-            this.textBox1.Text = str[3];
-            str = Function.ExamTemplate(str);
             string str2 = string.Join("\r\n", str);
-            this.textBox1.Text += str2;
+            this.textBox1.Text = str2;
         }
 
 
@@ -74,7 +72,6 @@ namespace fakepack
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
             Function.Login(textBox2.Text, textBox2.Text);
             StudentService ws;
             ws = new StudentService();
@@ -114,7 +111,6 @@ namespace fakepack
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
             StudentService ws;
             ws = new StudentService();
             DataSet set = ws.getTemplate("_3[#$%wd*", this.textBox2.Text, "1", "高等数学_GS");

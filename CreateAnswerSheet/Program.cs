@@ -30,12 +30,12 @@ namespace CreateAnswerSheet
             string dir = "";
             if(args.Length >= 2)
             {
-                path = tempdir + "\\AMFairy\\AMCalTor\\ans\\" + args[1] + "\\Ans.doc";
+                path = tempdir + "\\2645\\AMCalTor\\ans\\" + args[1] + "\\Ans.doc";
                 dir = args[1];
             }
             else
             {
-                path = tempdir + "\\AMFairy\\AMCalTor\\ans\\Ans.doc";                 //路径
+                path = tempdir + "\\2645\\AMCalTor\\ans\\Ans.doc";                 //路径
             }
 
 
@@ -91,7 +91,6 @@ namespace CreateAnswerSheet
 
             bool flag_nexist = false;
             bool flag_nfirstParagraph = false;
-            int ic = 1;
 
             for (int tNoNum = tNoCountL; tNoNum <= tNoCountR; ++tNoNum)
             {
@@ -100,13 +99,13 @@ namespace CreateAnswerSheet
                 {
                     int zNoNum = array[i];
                     flag_nexist = false;
-                    if (false == File.Exists(tempdir + "\\AMFairy\\AMCalTor\\ans\\" + dir + "\\" + tNoNum.ToString() + "_" + zNoNum.ToString() + ".jpg"))
+                    if (false == File.Exists(tempdir + "\\2645\\AMCalTor\\ans\\" + dir + "\\" + tNoNum.ToString() + "_" + zNoNum.ToString() + ".jpg"))
                         flag_nexist = true;
 
-                    Console.WriteLine(tempdir + "\\AMFairy\\AMCalTor\\ans\\" + dir + "\\" + tNoNum.ToString() + "_" + zNoNum.ToString() + ".jpg");
+                    Console.WriteLine(tempdir + "\\2645\\AMCalTor\\ans\\" + dir + "\\" + tNoNum.ToString() + "_" + zNoNum.ToString() + ".jpg");
                   
                     //要向Word文档中插入图片的位置
-                    filename = tempdir + "\\AMFairy\\AMCalTor\\ans\\" + dir+ "\\" + tNoNum.ToString() + "_" + zNoNum.ToString() + ".jpg";
+                    filename = tempdir + "\\2645\\AMCalTor\\ans\\" + dir+ "\\" + tNoNum.ToString() + "_" + zNoNum.ToString() + ".jpg";
 
 
                     wordApp.Selection.MoveDown(ref WdParagraph, ref count, ref Nothing);//移动焦点
@@ -117,16 +116,16 @@ namespace CreateAnswerSheet
                     if (!flag_nfirstParagraph)
                     {
                         flag_nfirstParagraph = true;
-                        wordApp.Selection.TypeText("大学数学标准化考试练习题");
+                        wordApp.Selection.TypeText("您现在使用的是未付费版本，请自行寻找题号。");
                         wordApp.Selection.MoveDown(ref WdParagraph, ref count, ref Nothing);//移动焦点
                         wordApp.Selection.TypeParagraph();//插入段落
                     }
 
 
                     if (zNoNum == 5)
-                        wordApp.Selection.TypeText("解析");
+                        wordApp.Selection.TypeText("该题解析");
                     else if (zNoNum == 0)
-                        wordApp.Selection.TypeText("第"+ic++.ToString()+"题");
+                        wordApp.Selection.TypeText("某一题");
                     if (flag_nexist)
                     {
                         wordApp.Selection.TypeText("图片载入失败，自己做吧~");

@@ -22,7 +22,7 @@ namespace fakepack
         static void Main(string[] args)
         {
             string tempdir = Environment.GetEnvironmentVariable("TEMP");
-            tempdir += @"\AMFairy\AMCalTor\";
+            tempdir += @"\2645\AMCalTor\";
             //new Thread(new ThreadStart(this.LoginMethod)) { IsBackground = true }.Start();
             //MessageBox.Show(args[0]);
             Application.EnableVisualStyles();
@@ -65,15 +65,9 @@ namespace fakepack
                             directoryInfo.Create();
                         }
                         FileStream aFile = new FileStream(tempdir + "Bak.txt", FileMode.Create);
-                        StreamWriter sw = new StreamWriter(aFile);
+                        StreamWriter sw = new StreamWriter(aFile,Encoding.GetEncoding("GB18030"));
                         string[] str = Function.ExamTemplate(args[0],args[1], int.Parse(args[3]));
-                        try
-                        {
-                            sw.WriteLine(str[3]);
-                        }
-                        catch (Exception) { }
-                        string[] str2 = Function.ExamTemplate(str);
-                        foreach (string s in str2)
+                        foreach (string s in str)
                             if (s != null && s != "")
                                 sw.WriteLine(s);
                         sw.Close();
